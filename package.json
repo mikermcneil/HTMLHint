@@ -1,7 +1,7 @@
 {
   "name": "@sailshq/htmlhint",
   "version": "0.9.15",
-  "description": "A Static Code Analysis Tool for HTML",
+  "description": "A fork of Yanis Wang's HTMLHint, maintained by the Sails core team.",
   "main": "./index",
   "dependencies": {
     "async": "1.5.2",

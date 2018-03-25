@@ -1,111 +1,32 @@
-HTMLHint
-=======================
+# @sailshq/htmlhint
 
-![HTMLHint logo](https://raw.github.com/yaniswang/HTMLHint/master/logo.png)
+A fork of HTMLHint 0.9.14 with ongoing maintenance from the [Sails core team](http://sailsjs.com/about).
 
-HTMLHint is a Static Code Analysis Tool for HTML, you can use it with IDE or in build system.
+This repo will only be updated when there are immediate, material issues affecting expected usage, or annoying NPM deprecation warnings, like [this one](https://github.com/yaniswang/HTMLHint/pull/191).  Our goal is to diverge as little as possible.
 
-[![Build Status](https://img.shields.io/travis/yaniswang/HTMLHint.svg)](https://travis-ci.org/yaniswang/HTMLHint)
-[![Coverage Status](https://img.shields.io/coveralls/yaniswang/HTMLHint.svg)](https://coveralls.io/github/yaniswang/HTMLHint?branch=master)
-[![NPM version](https://img.shields.io/npm/v/htmlhint.svg?style=flat)](https://www.npmjs.com/package/htmlhint)
-[![License](https://img.shields.io/npm/l/htmlhint.svg?style=flat)](https://www.npmjs.com/package/htmlhint)
-[![NPM count](https://img.shields.io/npm/dm/htmlhint.svg?style=flat)](https://www.npmjs.com/package/htmlhint)
-[![NPM count](https://img.shields.io/npm/dt/htmlhint.svg?style=flat)](https://www.npmjs.com/package/htmlhint)
+**In other words, there will _never_ be any new methods or options added to HTMLHint on this fork, and consequently there will be no minor version or major version bumps from this fork-- only patches.**
 
-Official Site: [http://htmlhint.com/](http://htmlhint.com/)
+## Bugs &nbsp; [![npm version](https://badge.fury.io/js/%40sailshq%2Fhtmlhint.svg)](https://badge.fury.io/js/%40sailshq%2Fhtmlhint)
 
-Quick start
-======================
+To report a bug, [click here](http://sailsjs.com/bugs).
 
-1. install & hint
 
-        npm install htmlhint -g
-        htmlhint -V
-        htmlhint --help
-        htmlhint www
-        htmlhint www/test.html
-        htmlhint www/**/*.xhtml
-        htmlhint www/**/*.{htm,html}
-        htmlhint http://www.alibaba.com/
-        cat test.html | htmlhint stdin
+## Contributing
 
-2. results
+Please observe the guidelines and conventions laid out in the [Sails project contribution guide](http://sailsjs.com/documentation/contributing) when opening issues or submitting pull requests.
 
-           test.html
-              L5 |    </head>
-                      ^ <title> must be present in <head> tag. (title-require)
-              L8 |    </body>
-                      ^ Tag must be paired, missing: [ </div> ], start tag match failed [ <div> ] on line 7. (tag-pair)
+[![NPM](https://nodei.co/npm/@sailshq/htmlhint.png)](http://npmjs.com/package/@sailshq/htmlhint)
 
-        2 errors in 1 files
+## License
 
-3. config rules
+#### htmlhint license
 
-    search `.htmlhintrc` file in current directory and all parent directories:
+[HTMLHint](http://htmlhint.com/) is free and open source under the [MIT License](https://github.com/yaniswang/HTMLHint/blob/60447c9472971f08a9c71ce76a9613da384a4484/LICENSE.md).
 
-        htmlhint
-        htmlhint test.html
+#### Supplementary license
 
-    custom config file:
+All ad hoc additions in this repo are also MIT-licensed, copyright &copy; 2018 [The Sails Company](http://sailsjs.com/about).
 
-        htmlhint --config htmlhint.conf test.html
+#### Sails framework license
 
-    custom rules:
-
-        htmlhint --rules tag-pair,id-class-value=underline test.html
-
-    Inline rules in `test.html`:
-
-        <!--htmlhint tag-pair,id-class-value:underline -->
-        <html>
-        <head>
-            ...
-
-Guide
-=======================
-
-1. [How to use](https://github.com/yaniswang/HTMLHint/wiki/Usage)
-2. [All Rules](https://github.com/yaniswang/HTMLHint/wiki/Rules)
-2. [How to Develop](https://github.com/yaniswang/HTMLHint/wiki/Developer-guide)
-
-License
-================
-
-HTMLHint is released under the MIT license:
-
-> The MIT License
->
-> Copyright (c) 2014-2016 Yanis Wang \< yanis.wang@gmail.com \>
->
-> Permission is hereby granted, free of charge, to any person obtaining a copy
-> of this software and associated documentation files (the "Software"), to deal
-> in the Software without restriction, including without limitation the rights
-> to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-> copies of the Software, and to permit persons to whom the Software is
-> furnished to do so, subject to the following conditions:
->
-> The above copyright notice and this permission notice shall be included in
-> all copies or substantial portions of the Software.
->
-> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-> THE SOFTWARE.
-
-Thanks
-================
-
-* mocha: [https://github.com/visionmedia/mocha](https://github.com/visionmedia/mocha)
-* expect.js: [https://github.com/LearnBoost/expect.js](https://github.com/LearnBoost/expect.js)
-* istanbul: [https://github.com/gotwarlost/istanbul](https://github.com/gotwarlost/istanbul)
-* Grunt: [http://gruntjs.com/](http://gruntjs.com/)
-* commander.js: [https://github.com/visionmedia/commander.js](https://github.com/visionmedia/commander.js)
-* colors.js: [https://github.com/Marak/colors.js](https://github.com/Marak/colors.js)
-* glob: [https://github.com/isaacs/node-glob](https://github.com/isaacs/node-glob)
-* jshint: [https://github.com/jshint/jshint](https://github.com/jshint/jshint)
-* csslint: [https://github.com/stubbornella/csslint](https://github.com/stubbornella/csslint)
-* request: [https://github.com/request/request](https://github.com/request/request)
-* GitHub: [https://github.com/](https://github.com/)
+The [Sails framework](https://sailsjs.com) is free and open-source under the [MIT License](http://sailsjs.com/license).
