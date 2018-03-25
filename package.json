@@ -1,6 +1,6 @@
 {
   "name": "@sailshq/htmlhint",
-  "version": "0.9.15",
+  "version": "0.9.16",
   "description": "A fork of Yanis Wang's HTMLHint, maintained by the Sails core team.",
   "main": "./index",
   "dependencies": {
