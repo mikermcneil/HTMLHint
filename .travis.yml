@@ -2,15 +2,18 @@ sudo: false
 
 language: node_js
 node_js:
-    - "0.10"
-    - "0.12"
-    - "4.4.3"
-    - "5.9.1"
-    - "6.0.0"
+    - "6"
+    - "8"
+    - "10"
+    - "node"
 
 cache:
   directories:
     - node_modules
+
+notifications:
+  email:
+    - ci@sailsjs.com
 
 matrix:
   fast_finish: true
